@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #007bff;
+    --background-color: #f0f2f5;
+    --card-color: #ffffff;
+    --text-color: #333;
+    --label-color: #666;
+    --result-color: #28a745;
+    --border-color: #ddd;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator-container {
+    width: 100%;
+    max-width: 400px; /* Taille idéale pour un smartphone */
+    background-color: var(--card-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: var(--label-color);
+    font-size: 0.9rem;
+}
+
+.calculator-form {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes pour les macros */
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    color: var(--label-color);
+    font-size: 0.85rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    /* Supprime les flèches sur les champs de type number */
+    -moz-appearance: textfield;
+}
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #fafafa;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.result-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--label-color);
+}
+
+.result-value {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--result-color);
+    line-height: 1.1;
+}
+
+.reset-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
